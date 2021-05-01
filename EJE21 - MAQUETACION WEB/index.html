@@ -5,8 +5,102 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!--EJERCICIO 21 - CREAR MAQUETA DE PAGINA WEB -->
+    <!--EJERCICIO 21 - CREAR MAQUETA DE PAGINA WEB (NO RESPONSIVE)-->
+    <div class="body">
+      <div class="container">
+        <header class="header">
+          <h1>Proyecto JS</h1>
+          <nav class="menu">
+            <a href="#" target="_blank" class="menu__link" rel="noopener noreferrer">Inicio</a>
+            <a href="#" target="_blank" class="menu__link" rel="noopener noreferrer">Reloj</a>
+            <a href="#" target="_blank" class="menu__link" rel="noopener noreferrer">Sobre Mi</a>
+            <a href="#" target="_blank" class="menu__link" rel="noopener noreferrer">Contacto</a>
+          </nav>
+        </header>
+        <main>
+          <section class="wrapper">
+            <div class="btn-arrow btn-arrow__back"></div>
+            <div class="slides-container">
+              <figure class="slide-image">
+                <img
+                  src="https://images.unsplash.com/photo-1532763303805-529d595877c5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                  alt="Planta floreciendo"
+                />
+              </figure>
+              <figure class="slide-image">
+                <img
+                  src="https://images.unsplash.com/photo-1617989631635-b6bed73949dd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1347&q=80"
+                  alt="Arbol en temporada de invierno"
+                />
+              </figure>
+              <figure class="slide-image">
+                <img
+                  src="https://images.unsplash.com/photo-1618080621010-74e7832a27a4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1350&q=80"
+                  alt="Flores rosadas en plena luz del dia"
+                />
+              </figure>
+            </div>
+            <div class="btn-arrow btn-arrow__forward"></div>
+            <ul class="navigation-dots">
+              <li class="single-dot" op_index="0"></li>
+              <li class="single-dot" op_index="1"></li>
+              <li class="single-dot" op_index="2"></li>
+            </ul>
+          </section>
+        </main>
+        <div class="context">
+          <section class="context-details">
+            <article class="article">
+              <header class="article__header">
+                <h1>Prueba de titulo 1</h1>
+                <span>Publicado el dia <time datetime="2021-03-23">23 de Marzo del 2021</time></span>
+              </header>
+              <div class="article__content">
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis doloribus temporibus vitae pariatur? Fuga, suscipit distinctio.
+                  Delectus sed ducimus, doloribus dolores neque, quas alias sunt veritatis nemo harum animi possimus! Incidunt consequuntur cupiditate
+                  autem error nulla officia perferendis officiis porro. Vero provident sapiente obcaecati in doloribus minima modi ex, commodi aperiam
+                  facere quaerat nobis quia id beatae impedit at architecto? Aperiam assumenda asperiores corrupti, animi exercitationem inventore
+                  ullam facilis, corporis temporibus voluptas, id adipisci dolorem sequi nesciunt consequuntur impedit sed. Iusto dolores nesciunt
+                  magnam veritatis asperiores nam officiis ea quam!
+                </p>
+                <a href="#" target="_blank" rel="noopener noreferrer">Leer mas</a>
+              </div>
+            </article>
+            <article class="article">
+              <header class="article__header">
+                <h1>Prueba de titulo 2</h1>
+                <span>Publicado el dia <time datetime="2021-03-23">23 de Marzo del 2021</time></span>
+              </header>
+              <div class="article__content">
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis doloribus temporibus vitae pariatur? Fuga, suscipit distinctio.
+                  Delectus sed ducimus, doloribus dolores neque, quas alias sunt veritatis nemo harum animi possimus! Incidunt consequuntur cupiditate
+                  autem error nulla officia perferendis officiis porro. Vero provident sapiente obcaecati in doloribus minima modi ex, commodi aperiam
+                  facere quaerat nobis quia id beatae impedit at architecto? Aperiam assumenda asperiores corrupti, animi exercitationem inventore
+                  ullam facilis, corporis temporibus voluptas, id adipisci dolorem sequi nesciunt consequuntur impedit sed. Iusto dolores nesciunt
+                  magnam veritatis asperiores nam officiis ea quam!
+                </p>
+                <a href="#" target="_blank" rel="noopener noreferrer">Leer mas</a>
+              </div>
+            </article>
+          </section>
+          <aside class="aside">
+            <h3><span>¿Quien soy?</span></h3>
+            <img
+              src="https://images.unsplash.com/photo-1566392643955-ee2b81cefa9f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+              alt="Mono blanco apoyado en escalones"
+            />
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At esse, maxime sunt voluptatem, sit hic expedita unde minima maxima.</p>
+          </aside>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
   </body>
 </html>

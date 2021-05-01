@@ -1,0 +1,216 @@
+/*Custom Properties*/
+:root {
+  --first-color: #17ba42;
+  --first-alpha-color: rgba(3, 99, 29, 1);
+  --second-color: #08bcbf;
+  --second-alpha-color: rgba(8, 108, 110, 1);
+  --third-color: #501464;
+  --third-alpha-color: rgba(80, 20, 100, 0.75);
+  --white-color: #fff;
+  --gray-light-color: #f3f3f3;
+  --gray-color: #ccc;
+  --gray-dark-color: #666;
+  --black-color: #000;
+  --link-color: #e2e7ec;
+  --title-color: #333;
+  --white-alpha-color: rgba(255, 255, 255, 0.5);
+  --black-alpha-color: rgba(0, 0, 0, 0.6);
+  --font: "Quicksand", Tahoma, sans-serif;
+  --max-width: 1400px;
+}
+/*Reset*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  color: var(--link-color);
+  transition: all 0.5s ease-out;
+}
+
+a:hover {
+  opacity: 0.65;
+}
+
+body {
+  line-height: 1;
+  overflow-x: hidden;
+  color: var(--text-color);
+}
+
+html {
+  font-family: var(--font);
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+/* prettier-ignore */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, 
+p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn,
+em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, 
+b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, 
+table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, 
+details, embed, figure, figcaption, footer, header, menu, nav, output,
+section, summary, time, mark, audio, video
+{
+    margin: 0;
+    padding: 0;
+    border:0;
+    font-size: 100%;
+    font-weight: normal;
+}
+
+h1 {
+  font-size: 2.6rem;
+}
+
+h2 {
+  font-size: 2.2rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+h4 {
+  font-size: 1.4rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+h6 {
+  font-size: 0.8rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+li {
+  list-style: none;
+}
+p {
+  line-height: 1.7;
+}
+
+/*Components = Menus , botones , keyframes, etc*/
+
+/*Utilities*/
+
+/*Site Style*/
+.body {
+  background: linear-gradient(rgba(224, 47, 47, 0.8), rgba(167, 31, 167, 0.8), rgba(1, 1, 1, 0.8));
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.slide-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide-hidden {
+  overflow: hidden;
+  box-shadow: 15px 15px 30px black, -15px -15px 30px black;
+}
+
+.slider {
+  width: 950px;
+  height: 550px;
+  display: grid;
+  grid-template-columns: repeat(7, 100%);
+}
+
+.slide-image {
+  overflow: hidden;
+  position: relative;
+}
+
+.slide-image > img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.navigation {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 950px;
+  height: 550px;
+}
+
+.navigation::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 30%;
+  width: 100%;
+  left: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+}
+
+.btn {
+  font-size: 1.2rem;
+  padding: 1.2rem 1.4rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  opacity: 0.6;
+  cursor: pointer;
+  transition: opacity 0.6s ease-out;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+.btn--prev {
+  left: 6%;
+}
+
+.btn--next {
+  right: 6%;
+}
+
+.dotted {
+  position: absolute;
+  bottom: 4%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  z-index: 1;
+}
+
+.option {
+  border: 3px solid rgb(252, 18, 14);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: 0 0.3rem;
+  cursor: pointer;
+}
+
+.pointred {
+  background-color: rgba(173, 24, 24, 0.7);
+}

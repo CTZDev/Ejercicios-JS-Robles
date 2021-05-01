@@ -5,8 +5,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
   </head>
   <body>
-    <h1>EJERCICIO 17</h1>
+    <!--Hacer un slider de imágenes funcional (Buscar librerias externas) o con JS Vanilla-->
+    <div class="body">
+      <!--Begin Slider-->
+      <div class="container">
+        <div class="slide-container">
+          <div class="slide-hidden">
+            <div class="slider">
+              <figure class="slide-image" id="first">
+                <img src="image/bg5.jpg" />
+              </figure>
+              <figure class="slide-image">
+                <img src="image/bg1.jpg" />
+              </figure>
+              <figure class="slide-image">
+                <img src="image/bg2.jpg" />
+              </figure>
+              <figure class="slide-image">
+                <img src="image/bg3.jpg" />
+              </figure>
+              <figure class="slide-image">
+                <img src="image/bg4.jpg" />
+              </figure>
+              <figure class="slide-image">
+                <img src="image/bg5.jpg" />
+              </figure>
+              <figure class="slide-image" id="last">
+                <img src="image/bg1.jpg" />
+              </figure>
+            </div>
+          </div>
+          <div class="navigation">
+            <button class="btn btn--prev" id="prev"><i class="fas fa-chevron-left"></i></button>
+            <button class="btn btn--next" id="next"><i class="fas fa-chevron-right"></i></button>
+            <ul class="dotted">
+              <li class="option" op-index="0"></li>
+              <li class="option" op-index="1"></li>
+              <li class="option" op-index="2"></li>
+              <li class="option" op-index="3"></li>
+              <li class="option" op-index="4"></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--End Slider /.-->
+    </div>
+    <script src="main.js"></script>
   </body>
 </html>

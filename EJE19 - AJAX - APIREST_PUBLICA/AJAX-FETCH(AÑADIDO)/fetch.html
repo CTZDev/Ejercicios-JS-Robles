@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--FETCH = FORMA MAS MODERNA DE REALIZAR CON AJAX -- AQUI YA TIENE PREVALIDADO CON EL REPONSE.OK -->
+    <script>
+      const data = new FormData(); //Atachear info para solicitud
+      //INGRESO DE VARIABLES (CLAVE - VALOR)
+      data.append("a", 5);
+      data.append("b", 29);
+
+      //1° param: Llamar solicitud http , 2° param: metodo a usar, body , que es el objeto data
+      fetch("servidor.php", {
+        method: "POST",
+        body: data,
+      })
+        // Se ejecuta en forma de tuberia , de 1 a otro, capturando los return
+        // Resultado: Tipo Promise => PromiseState = Evalua si se cumplio / Prom.result = Evaluacion en string
+        .then((response) => {
+          if (!response.ok) {
+            throw "Error en la llamada"; //Si algo sale mal
+          }
+          return response.text();
+        })
+        .then((text) => {
+          console.log(text); // Esta solicitud es para tener el texto ya como tal, del primer then()
+        })
+        .catch((err) => {
+          console.log(err); // Error encontrad en los then
+        });
+      //then : evaluar solicitudes asincronas
+    </script>
+  </body>
+</html>
