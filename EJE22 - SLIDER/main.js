@@ -48,6 +48,10 @@ document.addEventListener("DOMContentLoaded", () => {
     slide();
   }
 
+  window.addEventListener("resize", () => {
+    sizeImage = $slideImage[index].clientWidth;
+  });
+
   document.addEventListener("transitionend", () => {
     if ($slideImage[index].id === "first") {
       $slider.style.transition = "none";

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1>Friend Registration Form</h1>
+    </header>
+    <section>
+      <form action="#" method="post">
+        <div class="form-group">
+          <label for="txtId">Id: </label>
+          <input type="text" class="form-control" id="txtId" />
+        </div>
+        <div class="form-group">
+          <label for="txtName">Name: </label>
+          <input type="text" class="form-control" id="txtName" />
+        </div>
+        <div class="form-group">
+          <label for="txtCountry">Country: </label>
+          <input type="text" class="form-control" id="txtCountry" />
+        </div>
+        <div class="form-group">
+          <label for="txtBirthday">Birthday: </label>
+          <input type="date" class="form-control" id="txtBirthday" />
+        </div>
+        <div class="form-group">
+          <label for="txtEmail">Email: </label>
+          <input type="email" class="form-control" id="txtEmail" />
+        </div>
+        <button type="button" class="btn btn-default" id="btnSaveFriend">Save Friend</button>
+      </form>
+    </section>
+    <div class="container">
+      <h2>My Friends</h2>
+      <table class="table" id="tblFriends">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Country</th>
+            <th>Birthday</th>
+            <th>Email</th>
+            <th>Select</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <script src="businnes-logic.js"></script>
+    <script src="ui-logic.js"></script>
+  </body>
+</html>

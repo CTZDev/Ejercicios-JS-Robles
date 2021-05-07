@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    tr > th {
+      border-bottom: 2px solid black;
+    }
+    tr > td {
+      padding: 10px;
+      border: 1px solid red;
+      text-align: center;
+    }
+  </style>
+  <body>
+    <!--Hacer un formulario que permita guardar en el localstorage los nombres y apellidos del usuario que esta en la web y en el caso de que exista la sesion mostrarla-->
+    <h1>LOGIN</h1>
+    <section>
+      <form action="#" method="GET" id="form-login">
+        <div class="form-group">
+          <label for="txtname">Nombres: </label>
+          <input type="text" class="form-control" id="txtname" placeholder="Nombres completos" />
+        </div>
+        <div class="form-group">
+          <label for="txtlastName">Apellidos: </label>
+          <input type="text" class="form-control" id="txtlastName" placeholder="Apellidos completos" />
+        </div>
+
+        <input type="submit" id="btnSend" value="Login" />
+      </form>
+    </section>
+    <script src="bussines-logic.js"></script>
+    <script src="ui-logic.js"></script>
+  </body>
+</html>

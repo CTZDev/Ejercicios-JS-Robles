@@ -43,7 +43,7 @@ body {
 html {
   font-family: var(--font);
   font-size: 16px;
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; PARA QUE FUNCIONE EL REQUESTANIMATEFRAME*/
 }
 
 /* prettier-ignore */
@@ -107,7 +107,7 @@ p {
   margin-right: auto;
   max-width: var(--max-width);
   border: 2px solid black;
-  background-color: #fff;
+  background-color: var(--white-color);
   padding: 1rem 2.5rem;
 }
 
@@ -133,8 +133,12 @@ p {
   background-color: var(--first-color);
   width: max-content;
   padding: 1rem;
-  font-weight: bolder;
+}
+
+.header .brand {
   color: var(--white-color);
+  font-weight: bold;
+  text-decoration: none;
 }
 
 .menu {
@@ -227,6 +231,7 @@ p {
 .context {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 6rem;
 }
 
 .context-details {
@@ -293,17 +298,51 @@ p {
 
 .aside > h3 > span {
   font-weight: bold;
-  background: #fff;
+  background: var(--white-color);
   padding: 0 15px;
 }
 
 .aside > img {
   object-fit: cover;
-  height: 650px;
   object-position: center;
+  height: 650px;
 }
 
 .aside p {
   padding-top: 0.6rem;
   line-height: 1.4;
+}
+
+.scroll-top {
+  position: fixed;
+  bottom: 30px;
+  color: var(--white-color);
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  z-index: 2;
+  border: 4px solid var(--third-color);
+  background-color: var(--first-color);
+  border-radius: 50%;
+  transition: all 0.4s ease-in-out;
+}
+
+.scroll-top:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+/*NO REACCIONA A EVENTOS DE PUNTERO*/
+.scroll-top > i {
+  pointer-events: none;
+}
+
+.scroll-show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.scroll-hidden {
+  opacity: 0;
+  visibility: hidden;
 }

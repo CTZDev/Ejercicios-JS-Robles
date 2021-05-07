@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    tr > th {
+      border-bottom: 2px solid black;
+    }
+    tr > td {
+      padding: 10px;
+      border: 1px solid red;
+      text-align: center;
+    }
+  </style>
+  <body>
+    <!--Crear formulario para guardar nombres de personas en el localstorage y mostrarlos por pantalla en una lista de HTML // En la lista anterior añade un boton para poder eliminar elementos del localstorage-->
+    <h1>Friend Registration Form</h1>
+    <section>
+      <form action="#" method="POST" id="form-friend">
+        <div class="form-group">
+          <label for="txtName">Name: </label>
+          <input type="text" class="form-control" id="txtName" name="txtName" placeholder="Nombres Completos" />
+        </div>
+        <div class="form-group">
+          <label for="txtCountry">Country: </label>
+          <input type="text" class="form-control" id="txtCountry" name="txtCountry" placeholder="Pais" />
+        </div>
+        <div class="form-group">
+          <label for="txtBirthday">Birthday: </label>
+          <input type="date" class="form-control" id="txtBirthday" name="txtBirthday" />
+        </div>
+        <div class="form-group">
+          <label for="txtEmail">Email: </label>
+          <input type="email" class="form-control" id="txtEmail" name="txtEmail" placeholder="Correo electronico" />
+        </div>
+        <input type="submit" id="btnSend" value="Save Friend" />
+      </form>
+    </section>
+    <div class="container">
+      <h2>List Friends</h2>
+      <table class="table" id="tblFriends">
+        <thead>
+          <th>NAME</th>
+          <th>COUNTRY</th>
+          <th>BIRTHDAY</th>
+          <th>EMAIL</th>
+          <th>DELETE</th>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <script src="bussines-logic.js"></script>
+    <script src="ui-logic.js"></script>
+  </body>
+</html>

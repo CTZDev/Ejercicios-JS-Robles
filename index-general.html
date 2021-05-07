@@ -7,14 +7,72 @@
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./EJE21 - MAQUETACION WEB/style.css" />
+    <style>
+      .background {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-bottom: 1.5rem;
+        position: relative;
+        padding: 0.6rem;
+        z-index: 1;
+      }
+
+      .background::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 190px;
+        height: 100%;
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 1));
+        z-index: -1;
+      }
+
+      .btn {
+        outline: none;
+        border: 3px solid transparent;
+        padding: 1.2rem;
+        cursor: pointer;
+        margin: 0 0.4rem;
+        transition: border 0.5s ease-out;
+      }
+
+      .btn:hover {
+        border: 3px solid rgba(161, 160, 160, 0.8);
+      }
+
+      .btn:focus {
+        border: 3px solid black;
+      }
+
+      .btn--green {
+        background-color: rgb(0, 102, 0);
+      }
+
+      .btn--redlight {
+        background-color: rgb(247, 39, 39);
+      }
+
+      .btn--skyblue {
+        background-color: rgb(1, 98, 136);
+      }
+    </style>
   </head>
   <body>
     <!--EJERCICIO 21 - CREAR MAQUETA DE PAGINA WEB (NO RESPONSIVE)-->
+    <!--EJERCICIO 22 - Hacer un slider de imágenes funcional (Buscar librerias externas) o con JS Vanilla-->
+    <!--EJERCICIO 24- Haz un cambiador de temas (cambiar colores y fondos de la web al hacler click en los botones flotantes laterales) Minuto 7:24 del video del ejse21 . Colores de la izquierda-->
+    <!--EJERCICIO 25 - Al final de la web habra un boton para sdubir al principio de la web haciendo una animación en el scroll automatico y suavizado-->
+    <!--EJERCICIO 26 - Hacer un formulario que permita guardar en el localstorage los nombres y apellidos del usuario que esta en la web y en el caso de que exista la sesion mostrarla-->
+
     <div class="body">
       <div class="container">
         <header class="header">
-          <h1>Proyecto JS</h1>
+          <h1>
+            <a href="" class="brand">Proyecto JS</a>
+          </h1>
           <nav class="menu">
             <a href="#" target="_blank" class="menu__link" rel="noopener noreferrer">Inicio</a>
             <a href="#" target="_blank" class="menu__link" rel="noopener noreferrer">Reloj</a>
@@ -22,6 +80,11 @@
             <a href="#" target="_blank" class="menu__link" rel="noopener noreferrer">Contacto</a>
           </nav>
         </header>
+        <section class="background">
+          <button class="btn btn--green"></button>
+          <button class="btn btn--redlight"></button>
+          <button class="btn btn--skyblue"></button>
+        </section>
         <main>
           <section class="wrapper">
             <div class="btn-arrow btn-arrow__back"></div>
@@ -91,7 +154,7 @@
             </article>
           </section>
           <aside class="aside">
-            <h3><span>¿Quien soy?</span></h3>
+            <h3><span class="iAm">¿Quien soy?</span></h3>
             <img
               src="https://images.unsplash.com/photo-1566392643955-ee2b81cefa9f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
               alt="Mono blanco apoyado en escalones"
@@ -99,8 +162,13 @@
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At esse, maxime sunt voluptatem, sit hic expedita unde minima maxima.</p>
           </aside>
         </div>
+
+        <div class="scroll-top">
+          <i class="fa fa-angle-up fa-3x"></i>
+        </div>
       </div>
     </div>
-    <script src="main.js"></script>
+    <script src="https://kit.fontawesome.com/9189002154.js" crossorigin="anonymous"></script>
+    <script src="./EJE27 - EFECTO ACORDEON/main.js"></script>
   </body>
 </html>

@@ -18,7 +18,6 @@ document.addEventListener("DOMContentLoaded", () => {
     //Inicializamos cada elemento HTML, y agregamos una clase
     $slideImage[0].classList.add("active"); //Activado el 1° slide
     $navigationDots.children[0].classList.add("active"); //Activado 1° dot
-    navigationDots();
   }
   //Se inicializa
   init();
@@ -42,6 +41,10 @@ document.addEventListener("DOMContentLoaded", () => {
     currentActiveDot.classList.remove("active");
     $navigationDots.children[currentSlide].classList.add("active");
   };
+
+  window.addEventListener("resize", () => {
+    slideWidth = $slideImage[0].clientWidth; // Tamaño de la imagen
+  });
 
   document.addEventListener("click", (e) => {
     //Btn Next // Valor de cd boton , evaluamos si llega a la ultima img , retornamos a 0, y vamos aumentando currentSlide
