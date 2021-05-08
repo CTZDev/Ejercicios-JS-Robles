@@ -153,8 +153,23 @@ p {
   position: relative;
   height: 100%;
   line-height: 50px;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.4s ease-in-out;
   z-index: 2;
+}
+.menu__item:nth-child(3) {
+  width: 150px;
+}
+
+.menu__item:nth-child(3)::after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f107";
+  position: absolute;
+  right: 8px;
+  top: 1px;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: bold;
+  pointer-events: none;
 }
 
 .menu__item:hover {
@@ -162,7 +177,7 @@ p {
   transform: scale(1.02);
 }
 
-.menu__item:hover > .submenu {
+.submenu.active {
   max-height: 450px;
 }
 
@@ -173,13 +188,13 @@ p {
   z-index: inherit;
   max-height: 0;
   overflow: hidden;
-  transition: all 0.3s ease-in;
+  transition: all 0.4s ease-in-out;
 }
 
 .submenu__item {
   padding: 0 0.6rem;
   height: 50px;
-  width: 140px;
+  width: 150px;
   transition: all 0.6s ease-out;
 }
 
@@ -188,7 +203,7 @@ p {
 }
 
 .menu__link {
-  padding: 0 1.5rem;
+  padding: 0 1.5rem 0 0.8rem;
   font-size: 1.1rem;
   font-weight: bold;
 }
@@ -200,7 +215,6 @@ p {
 .menu__link,
 .submenu__link {
   text-decoration: none;
-  display: block;
   width: 100%;
   height: 100%;
   color: var(--white-color);
