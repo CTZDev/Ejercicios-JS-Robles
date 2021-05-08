@@ -7,6 +7,27 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>EJERCICIO 17</h1>
+    <!--Seccion de contacto con formulario con todas las validaciones (USAR PATRONES PARA MEJOR SEGURIDAD)-->
+    <h1>Contact Form Validity</h1>
+    <form action="#" method="get" id="form-contact" novalidate>
+      <div class="form-group">
+        <label for="txtname">Nombres: </label>
+        <input type="text" id="txtname" placeholder="Nombres completos" />
+      </div>
+      <div class="form-group">
+        <label for="txtlastName">Apellidos: </label>
+        <input type="text" id="txtlastName" placeholder="Apellidos completos" />
+      </div>
+      <div class="form-group">
+        <label for="txtemail">Email: </label>
+        <input type="email" id="txtemail" placeholder="Correo electronico" />
+      </div>
+      <div class="form-group">
+        <label for="txtmessage" style="vertical-align: top">Mensaje: </label>
+        <textarea id="txtmessage" cols="30" rows="10"></textarea>
+      </div>
+      <button type="submit">Enviar</button>
+    </form>
+    <script src="main.js"></script>
   </body>
 </html>

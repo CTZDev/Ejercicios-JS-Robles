@@ -1,0 +1,66 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1;
+  overflow-x: hidden;
+  color: var(--text-color);
+}
+
+/* prettier-ignore */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn,
+em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var,
+b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas,
+details, embed, figure, figcaption, footer, header, menu, nav, output,
+section, summary, time, mark, audio, video
+{
+    margin: 0;
+    padding: 0;
+    border:0;
+    font-size: 100%;
+    font-weight: normal;
+}
+
+/*Site Style */
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  padding: 2rem;
+}
+
+.date {
+  border: 2px solid red;
+  width: 1000px;
+  height: 800px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.date-day,
+.date-hour,
+.date-minuts,
+.date-seconds {
+  border: 2px solid black;
+  width: 240px;
+  height: 400px;
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.day__date,
+.hour__date,
+.minuts__date,
+.seconds__date {
+  font-size: 1.4em;
+  color: blue;
+}
